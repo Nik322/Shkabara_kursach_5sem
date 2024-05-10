@@ -1,0 +1,98 @@
+.header {
+    background-color: #4e3629;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #3d2921;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.main-nav {
+    flex-direction: row;
+}
+
+nav a {
+    color: #8c5b24;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 22px;
+    transition: color 0.3s ease-in-out;
+}
+.menu-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+.menu-item {
+    flex-grow: 1;
+    margin: 0 70px;
+}
+
+@media screen and (max-width: 1000px) {
+    .menu-list * {
+        display: none;
+    }
+
+    .burger, .burger + label {
+        position: fixed;
+        right: 20px;
+        top: 20px;
+        width: 30px;
+        z-index: 50;
+        cursor: pointer;
+    }
+
+    nav label::before {
+        content: '☰';
+        color: #ffffff;
+    }
+
+    .burger + label {
+        display: block;
+    }
+
+    .burger:checked ~ .menu-list {
+        height: auto;
+        display: block;
+    }
+
+    .burger:checked ~ .menu-list * {
+        display: block;
+        font-size: 18px;
+        margin: 15px;
+    }
+
+    nav label {
+        transition: 0.3s;
+    }
+
+    .burger:checked ~ label {
+        transform: rotate(90deg);
+    }
+
+    .navigation {
+        justify-content: left;
+    }
+}
+
+.logo a {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-image: url("pictures/Logo1.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.menu-item a:hover {
+    color: #d9b59c;
+}

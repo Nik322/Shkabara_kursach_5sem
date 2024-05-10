@@ -1,0 +1,92 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #4e3629;
+    flex-grow: 1;
+}
+
+.content {
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #cb7f1b;
+}
+
+.catalog-button {
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: #3f2006;
+    color: #8c5b24;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    border-radius: 20px;
+}
+
+.catalog-button:hover {
+    background-color: #64403e;
+}
+
+.circle-cards-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.circle-card {
+    width: 155px;
+    height: 155px;
+    background-color: #442c20;
+    border-radius: 50%;
+    margin: 100px;
+    box-shadow: 0 0 20px rgb(122, 78, 72);
+    color: #f5cb9c;
+}
+
+.circle-card h1{
+    color: #cb7f1b;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.circle-card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.circle-card:hover {
+    animation: pulse 1s infinite;
+    transform: scale(1.1);
+}
+
+.circle-card:not(:hover) {
+    transition: transform 0.3s ease-in-out;
+}
+
+p{
+    color: #F5CB9CFF;
+}
